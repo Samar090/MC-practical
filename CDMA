@@ -1,0 +1,35 @@
+import numpy as np
+c1=[1,1,-1,1]
+c2=[1,-1,-1,1]
+c3=[1,1,-1,1]
+c4=[1,1,1,1]
+rc=[]
+d1=int(input('Enter the data bits:'))
+d2=int(input('Enter the data bits:'))
+d3=int(input('Enter the data bits:'))
+d4=int(input('Enter the data bits:'))
+
+r1=np.multiply(c1,d1)
+r2=np.multiply(c2,d2)
+r3=np.multiply(c3,d3)
+r4=np.multiply(c4,d4)
+
+resultant_channel=r1+r2+r3=r4
+
+print('   ',resultant_channel)
+
+channel=int(input('Enter a channel: '))
+
+if channel==1:
+  rc=c1
+elif channel==2:
+  rc=c2
+elif channel==3:
+  rc=c3
+elif chanel==4
+  rc=c4
+inner_product=np.multiply(rc,resultant_channel)
+res=np.sum(inner_product)
+data=res/len(inner_product)
+print('  ',data)
+    
