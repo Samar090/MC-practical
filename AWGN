@@ -1,0 +1,100 @@
+import numpy as np
+import matplotlib.pyplot as plt
+n_bits=100000
+SNRdb=np.arange(-10,11,1)
+SNRs=10**(SNRdb/10)
+
+bits=np.ramdom.randint(0,2,n_bits)
+BERs=[]
+for SNR in SNRs:
+     symbols=2*bits-1
+     noise_power=1/SNR
+     noise=np.sqrt(noise_power)*np.random.randint(n_bits)
+     received=symbols+noise
+     decode_bits=(received>=0).astype(int)
+     BER=np.sum(bits!=decoded_bits)/n_bits
+     BERs.append(BER)
+plt.semilogy(SNRdb,BERs)
+plt.xlabel('SNR')
+plt.ylabel('BER')
+plt.title('SNR VS BER')
+plt.grid(true)
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
